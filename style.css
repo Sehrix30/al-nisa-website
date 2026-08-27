@@ -225,10 +225,11 @@ h3 {
     gap:var(--space-md) ; 
 }
 #ngo-work hr {
-    hr { border: none; 
+     border: none; 
         border-top: 1px solid var(--sage); 
-        margin: var(--space-md) 0; }
-}
+        margin: var(--space-md) 0; 
+    }
+
 #partners article {
     background-color: white;
     padding: 25px;
