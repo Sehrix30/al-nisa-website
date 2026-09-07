@@ -5,9 +5,7 @@ tabs.forEach(function(tab) {
   tab.addEventListener('click', function() {
     tabs.forEach(function(t) { t.classList.remove('active'); });
     tab.classList.add('active');
-
     var filter = tab.getAttribute('data-filter');
-
     cards.forEach(function(card) {
       if (filter === 'all' || card.getAttribute('data-cat') === filter) {
         card.classList.remove('is-hidden');
@@ -17,6 +15,7 @@ tabs.forEach(function(tab) {
     });
   });
 });
+
 var zoomableImages = document.querySelectorAll('.zoomable');
 var lightbox = document.getElementById('lightbox');
 var lightboxImg = document.getElementById('lightboxImg');
@@ -38,14 +37,4 @@ lightbox.addEventListener('click', function(event) {
   if (event.target === lightbox) {
     lightbox.classList.remove('active');
   }
-});
-var menuToggle = document.getElementById('menuToggle');
-var navLinks = document.getElementById('nav-Links');
-
-menuToggle.addEventListener('click', function() {
-    navLinks.classList.toggle('is-open');
-
-    var isOpen = navLinks.classList.contains('is-open');
-
-    menuToggle.setAttribute('aria-expanded', isOpen);
 });
