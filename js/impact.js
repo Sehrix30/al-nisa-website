@@ -38,3 +38,8 @@ lightbox.addEventListener('click', function(event) {
     lightbox.classList.remove('active');
   }
 });
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+    }
+});
